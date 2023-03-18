@@ -2,9 +2,28 @@ import { Container, Typography } from "@mui/material";
 
 const Conclution = () => {
   return (
-    <Container>
-      <Typography variant="h1">Conclusión</Typography>
-      <Typography>
+    <Container
+      maxWidth="xl"
+      sx={{
+        margin: "20px auto",
+      }}
+    >
+      <Typography
+        variant="h1"
+        align="center"
+        sx={{
+          mr: 2,
+          fontWeight: 700,
+          letterSpacing: ".3rem",
+          color: "inherit",
+          textDecoration: "none",
+          paddingLeft: "10px",
+          fontSize: { xs: "50px", md: "100px" },
+        }}
+      >
+        Conclusión
+      </Typography>
+      <Typography align="justify" variant="body1">
         Aunque la prostitución ha sido considerada uno de los oficios más
         antiguos del mundo, socialmente y legalmente no ha sido reconocida como
         tal, para ciertas sociedades aún sigue siendo una actividad discriminada

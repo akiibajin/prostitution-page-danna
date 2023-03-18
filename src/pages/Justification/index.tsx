@@ -6,9 +6,24 @@ const Justification = () => {
     <Container
       maxWidth="xl"
       sx={{
-        margin: "20px 0",
+        margin: "20px auto",
       }}
     >
+      <Typography
+        variant="h1"
+        align="center"
+        sx={{
+          mr: 2,
+          fontWeight: 700,
+          letterSpacing: ".3rem",
+          color: "inherit",
+          textDecoration: "none",
+          paddingLeft: "10px",
+          fontSize: { xs: "40px", md: "100px" },
+        }}
+      >
+        Justificación
+      </Typography>
       <Typography variant="body1" align="justify">
         La investigación propuesta busco dar solución (dar una mirada) a los
         derechos humanos de las personas involucradas a las prácticas sexuales

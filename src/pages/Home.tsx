@@ -3,8 +3,9 @@ import { Container, Typography } from "@mui/material";
 const Home = () => {
   return (
     <Container
+      maxWidth="xl"
       sx={{
-        margin: "20px 0",
+        margin: "20px auto",
       }}
     >
       <Typography
