@@ -1,0 +1,19 @@
+footer {
+  position: relative;
+  p {
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 25px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  img {
+    width: 100vw;
+    @media screen and (max-width: 765px) {
+      display: none;
+    }
+  }
+}
