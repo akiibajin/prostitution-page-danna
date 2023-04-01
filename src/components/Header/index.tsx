@@ -37,6 +37,10 @@ const pages = [
     name: "Conclusión",
     path: "conclusion",
   },
+  {
+    name: "Infografia",
+    path: "infografia",
+  },
 ];
 
 function Header() {
@@ -105,7 +109,7 @@ function Header() {
               }}
             >
               {pages.map(({ name, path }) => (
-                <Fragment>
+                <Fragment key={name}>
                   <Divider></Divider>
                   <MenuItem key={name} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">
@@ -143,7 +147,7 @@ function Header() {
             }}
           >
             {pages.map(({ name, path }) => (
-              <Fragment>
+              <Fragment key={name}>
                 <Divider
                   orientation="vertical"
                   variant="middle"

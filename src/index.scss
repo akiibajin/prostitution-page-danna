@@ -10,6 +10,9 @@
 @import "../node_modules/swiper/modules/pagination/pagination.scss";
 @import "../node_modules/swiper/modules/autoplay/autoplay.scss";
 
+@import "../node_modules/react-pdf/dist/esm/Page/TextLayer.css";
+@import "../node_modules/react-pdf/dist/esm/Page/AnnotationLayer.css";
+
 /* Components */
 @import "./styles/components/justification";
 @import "./styles//components/footer";

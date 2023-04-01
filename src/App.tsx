@@ -8,6 +8,7 @@ import Objectives from "./pages/Objectives";
 import Advantages from "./pages/Advantages";
 import CausesAndConsequences from "./pages/CausesAndConsequences";
 import Clasification from "./pages/Clasification";
+import Infography from "./pages/Infography";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           />
           <Route path="clasificacion" element={<Clasification />} />
           <Route path="conclusion" element={<Conclution />} />
+          <Route path="infografia" element={<Infography />} />
         </Route>
       </Routes>
     </div>
