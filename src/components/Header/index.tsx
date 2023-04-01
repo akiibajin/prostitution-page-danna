@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,11 +7,10 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../../assets/imgs/incapp.png";
 import CustomLink from "../ui-components/CustomLink";
+import { Button, Divider } from "@mui/material";
 
 const pages = [
   {
@@ -19,29 +18,36 @@ const pages = [
     path: "justificacion",
   },
   {
+    name: "Objetivos",
+    path: "objetivos",
+  },
+  {
+    name: "Ventajas y Desventajas",
+    path: "ventajas-desventajas",
+  },
+  {
+    name: "Causas y Consecuencias",
+    path: "causas-consecuencias",
+  },
+  {
+    name: "Clasificación",
+    path: "clasificacion",
+  },
+  {
     name: "Conclusión",
     path: "conclusion",
   },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -99,13 +105,16 @@ function Header() {
               }}
             >
               {pages.map(({ name, path }) => (
-                <MenuItem key={name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <CustomLink key={path} to={path}>
-                      {name}
-                    </CustomLink>
-                  </Typography>
-                </MenuItem>
+                <Fragment>
+                  <Divider></Divider>
+                  <MenuItem key={name} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">
+                      <CustomLink key={path} to={path}>
+                        {name}
+                      </CustomLink>
+                    </Typography>
+                  </MenuItem>
+                </Fragment>
               ))}
             </Menu>
           </Box>
@@ -134,9 +143,16 @@ function Header() {
             }}
           >
             {pages.map(({ name, path }) => (
-              <CustomLink key={name} to={path}>
-                {name}
-              </CustomLink>
+              <Fragment>
+                <Divider
+                  orientation="vertical"
+                  variant="middle"
+                  sx={{ height: "20px" }}
+                ></Divider>
+                <CustomLink key={name} to={path}>
+                  <Button color="inherit">{name}</Button>
+                </CustomLink>
+              </Fragment>
             ))}
           </Box>
         </Toolbar>

@@ -1,9 +1,8 @@
 footer {
   height: 100px;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  bottom: -5px;
   @media screen and (max-width: 765px) {
-    position: relative;
     bottom: -5px;
   }
   p {

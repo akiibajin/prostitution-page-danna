@@ -1,11 +1,19 @@
 /* Fonts */
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+/*Swiper */
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../node_modules/swiper/modules/pagination/pagination.scss";
+@import "../node_modules/swiper/modules/autoplay/autoplay.scss";
 
 /* Components */
 @import "./styles/components/justification";
 @import "./styles//components/footer";
+@import "./styles/components/banners";
 /* pages */
-@import "./styles/pages/main"
+@import "./styles/pages/main";
+@import "./styles/pages/home";

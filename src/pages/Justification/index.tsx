@@ -1,14 +1,18 @@
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 
 const Justification = () => {
   return (
     <Container
-      maxWidth="xl"
+      maxWidth="lg"
       sx={{
         margin: "20px auto",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
       }}
     >
+      <Divider></Divider>
       <Typography
         variant="h1"
         align="center"
@@ -19,7 +23,7 @@ const Justification = () => {
           color: "inherit",
           textDecoration: "none",
           paddingLeft: "10px",
-          fontSize: { xs: "40px", md: "100px" },
+          fontSize: { xs: "40px", md: "80px" },
         }}
       >
         Justificación
