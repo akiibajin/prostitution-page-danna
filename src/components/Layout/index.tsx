@@ -30,7 +30,8 @@ const Layout = () => {
         >
           {banners.map((banner) => (
             <SwiperSlide key={banner}>
-              <img src={banner} />
+              <img src={banner} loading="lazy" />
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </SwiperSlide>
           ))}
         </Swiper>
